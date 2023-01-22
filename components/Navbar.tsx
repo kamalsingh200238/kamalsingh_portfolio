@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import { useState } from "react";
+import Link from "next/link";
 
 import useScorllDirection from "../lib/hooks/useScrollDirection";
 import useIsScrolledToTop from "../lib/hooks/useIsScrolledToTop";
-import Link from "next/link";
+import useClickOutsideToClose from "../lib/hooks/useClickOutsideToClose";
 
 const navbarLinks = [
   {
@@ -21,9 +22,11 @@ const navbarLinks = [
 ];
 
 export default function Navbar() {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollDirection = useScorllDirection();
   const isScrolledToTop = useIsScrolledToTop();
+  const domNode = useClickOutsideToClose(closeMenu);
 
   // this function converts 1 => 01 or 2 => 02
   const addZeroInFront = (index: Number): String => {
@@ -65,7 +68,7 @@ export default function Navbar() {
           </g>
         </svg>
       </div>
-      <div>
+      <div ref={domNode}>
         <button
           className="relative z-50 h-10 w-10 md:hidden"
           onClick={toggleMenu}
