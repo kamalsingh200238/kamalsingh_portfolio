@@ -1,7 +1,13 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import useClickOutsideToClose from "../lib/hooks/useClickOutsideToClose";
 import HamburgerIcon from "./HamburgerIcon";
+import {
+  linksChildrenVariant,
+  linksContainerVariant,
+  resumeVariant,
+} from "@/lib/animations/navbar";
 
 interface Props {
   isMenuOpen: boolean;
@@ -46,9 +52,14 @@ export default function Menu({ closeMenu, toggleMenu, isMenuOpen }: Props) {
         } z-40 grid place-items-center text-sm transition-all duration-200 max-md:fixed max-md:inset-y-0 max-md:right-0 max-md:h-screen max-md:w-3/4 max-md:max-w-sm max-md:bg-primary-400 max-md:text-lg`}
       >
         <nav className="flex items-center justify-between gap-8 max-md:flex-col max-md:gap-8">
-          <ol className="flex items-center justify-between gap-8 text-tertiary-500 max-md:flex-col max-md:gap-8">
+          <motion.ol
+            className="flex items-center justify-between gap-8 text-tertiary-500 max-md:flex-col max-md:gap-8"
+            initial="hidden"
+            animate="visible"
+            variants={linksContainerVariant}
+          >
             {navbarLinks.map((link, index) => (
-              <li key={link.displayName}>
+              <motion.li variants={linksChildrenVariant} key={link.displayName}>
                 <a
                   href={link.link}
                   title={link.displayName}
@@ -60,16 +71,19 @@ export default function Menu({ closeMenu, toggleMenu, isMenuOpen }: Props) {
                   </span>
                   <span>{link.displayName}</span>
                 </a>
-              </li>
+              </motion.li>
             ))}
-          </ol>
-          <button>
-            <div className="hover-button-animation rounded-md px-4 py-2 text-sm max-md:mt-4 max-md:px-12 max-md:py-4">
-              <Link href={"/"} onClick={toggleMenu}>
-                Resume
-              </Link>
-            </div>
-          </button>
+          </motion.ol>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={resumeVariant}
+            className="hover-button-animation rounded-md px-4 py-2 text-sm max-md:mt-4 max-md:px-12 max-md:py-4"
+          >
+            <Link href={"/"} onClick={toggleMenu}>
+              Resume
+            </Link>
+          </motion.div>
         </nav>
       </aside>
     </div>
