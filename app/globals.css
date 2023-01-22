@@ -7,3 +7,29 @@
   --tertiary-color-500: #ccd6f6;
 }
 
+.hover-underline-animation {
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  background-color: var(--secondary-color-500);
+
+  width: 100%;
+  height: 2px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transform: scaleX(0);
+  transition-duration: 200ms;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease in out  */
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
