@@ -7,6 +7,10 @@
   --tertiary-color-500: #ccd6f6;
 }
 
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+
 .hover-underline-animation {
   position: relative;
 }
