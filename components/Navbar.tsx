@@ -1,12 +1,34 @@
+"use client"
 import { useState } from "react";
 
 import useScorllDirection from "../lib/hooks/useScrollDirection";
 import useIsScrolledToTop from "../lib/hooks/useIsScrolledToTop";
+import Link from "next/link";
+
+const navbarLinks = [
+  {
+    link: "#about",
+    displayName: "About",
+  },
+  {
+    link: "#work",
+    displayName: "Work",
+  },
+  {
+    link: "#contact",
+    displayName: "Contact",
+  },
+];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollDirection = useScorllDirection();
   const isScrolledToTop = useIsScrolledToTop();
+
+  // this function converts 1 => 01 or 2 => 02
+  const addZeroInFront = (index: Number): String => {
+    return String("0" + index).slice(-2);
+  };
 
   function toggleMenu() {
     setIsMenuOpen((prev) => !prev);
@@ -49,15 +71,17 @@ export default function Navbar() {
           onClick={toggleMenu}
         >
           <svg
-            className={`${isMenuOpen ? "rotate-180" : ""
-              } z-50 h-full w-full stroke-secondary-500 transition-all duration-200`}
+            className={`${
+              isMenuOpen ? "rotate-180" : ""
+            } z-50 h-full w-full stroke-secondary-500 transition-all duration-200`}
             viewBox="0 0 148 139"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <rect
-              className={`${isMenuOpen ? "rotate-45" : ""
-                } origin-center fill-secondary-500 transition-all duration-200`}
+              className={`${
+                isMenuOpen ? "rotate-45" : ""
+              } origin-center fill-secondary-500 transition-all duration-200`}
               x="18"
               y={isMenuOpen ? "62" : "27"} // for better animations
               width="112"
@@ -65,8 +89,9 @@ export default function Navbar() {
               rx="5"
             />
             <rect
-              className={`${isMenuOpen ? "opacity-0" : "opacity-100"
-                } fill-secondary-500 transition-all duration-200`}
+              className={`${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              } fill-secondary-500 transition-all duration-200`}
               x="18"
               y="62"
               width="112"
@@ -74,8 +99,9 @@ export default function Navbar() {
               rx="5"
             />
             <rect
-              className={`${isMenuOpen ? "-rotate-45" : ""
-                } origin-center fill-secondary-500 transition-all duration-200`}
+              className={`${
+                isMenuOpen ? "-rotate-45" : ""
+              } origin-center fill-secondary-500 transition-all duration-200`}
               x="18"
               y={isMenuOpen ? "62" : "97"} // for better animations
               width="112"
@@ -84,6 +110,36 @@ export default function Navbar() {
             />
           </svg>
         </button>
+        <aside
+          className={`${
+            isMenuOpen ? "max-md:translate-x-0" : "max-md:translate-x-full"
+          } z-40 grid place-items-center text-sm transition-all duration-200 max-md:fixed max-md:inset-y-0 max-md:right-0 max-md:h-screen max-md:w-3/4 max-md:max-w-sm max-md:bg-primary-400 max-md:text-lg`}
+        >
+          <nav className="flex items-center justify-between gap-8 max-md:flex-col max-md:gap-8">
+            <ol className="flex items-center justify-between gap-8 text-tertiary-500 max-md:flex-col max-md:gap-8">
+              {navbarLinks.map((link, index) => (
+                <li key={link.displayName}>
+                  <a
+                    href={link.link}
+                    title={link.displayName}
+                    onClick={toggleMenu}
+                    className="hover-underline-animation inline-block py-2 text-center hover:text-secondary-500"
+                  >
+                    <span className="font-fira text-secondary-500 max-md:block">
+                      {addZeroInFront(index + 1)}.{" "}
+                    </span>
+                    {link.displayName}
+                  </a>
+                </li>
+              ))}
+            </ol>
+            <button>
+              <div className="hover-button-animation rounded-md px-4 py-2 text-sm max-md:mt-4 max-md:px-12 max-md:py-4">
+                <Link href={"/"}>Resume</Link>
+              </div>
+            </button>
+          </nav>
+        </aside>
       </div>
     </header>
   );
