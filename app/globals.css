@@ -33,3 +33,58 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+.hover-button-animation {
+  position: relative;
+  color: var(--secondary-color-500);
+  border: 2px solid var(--secondary-color-500);
+  transition-duration: 200ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease in out  */
+}
+
+.hover-button-animation:hover {
+  background-color: rgb(96 255 217 / 0.1);
+  /* border-color: transparent; */
+}
+
+.hover-button-animation::before,
+.hover-button-animation::after {
+  content: "";
+
+  position: absolute;
+  width: 0px;
+  height: 0px;
+
+  transition-duration: 200ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease in out  */
+}
+
+.hover-button-animation::before {
+  bottom: 0;
+  left: 0;
+}
+
+.hover-button-animation::after {
+  top: 0;
+  right: 0;
+}
+
+.hover-button-animation:hover::before,
+.hover-button-animation:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.375rem /* 6px */;
+  /* width: calc(100% + 4px); */
+  /* height: calc(100% + 4px); */
+}
+
+.hover-button-animation:hover::before {
+  border-left: 1px solid var(--secondary-color-500);
+  border-bottom: 1px solid var(--secondary-color-500);
+}
+
+.hover-button-animation:hover::after {
+  border-right: 1px solid var(--secondary-color-500);
+  border-top: 1px solid var(--secondary-color-500);
+}
