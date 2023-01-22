@@ -16,10 +16,13 @@ const roboto = Roboto({
 
 export default function Home() {
   return (
-    <div className={`${firaCode.variable} ${oswald.variable} ${roboto.variable}`}>
+    <div
+      className={`${firaCode.variable} ${oswald.variable} ${roboto.variable}`}
+    >
       <div className="min-h-screen bg-primary-500 font-roboto text-gray-400">
         <Navbar />
+        <main id="content"></main>
       </div>
     </div>
-  )
+  );
 }
