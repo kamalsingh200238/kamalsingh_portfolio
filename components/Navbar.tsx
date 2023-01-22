@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import useScorllDirection from "../lib/hooks/useScrollDirection";
@@ -22,7 +22,6 @@ const navbarLinks = [
 ];
 
 export default function Navbar() {
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollDirection = useScorllDirection();
   const isScrolledToTop = useIsScrolledToTop();
@@ -40,6 +39,15 @@ export default function Navbar() {
   function closeMenu() {
     setIsMenuOpen(false);
   }
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      // toggle classes when isMenuOpen is true
+      document.body.classList.toggle("max-md:overflow-hidden", isMenuOpen);
+      const content = document.getElementById("content");
+      content.classList.toggle("max-md:blur-sm", isMenuOpen);
+    }
+  }, [isMenuOpen]);
 
   return (
     <header
