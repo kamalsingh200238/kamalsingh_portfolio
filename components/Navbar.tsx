@@ -143,7 +143,7 @@ export default function Navbar() {
                     className="hover-underline-animation inline-block py-2 text-center hover:text-secondary-500"
                   >
                     <span className="font-fira text-secondary-500 max-md:block">
-                      {addZeroInFront(index + 1)}.{" "}
+                      {addZeroInFront(index + 1)}.
                     </span>
                     {link.displayName}
                   </a>
