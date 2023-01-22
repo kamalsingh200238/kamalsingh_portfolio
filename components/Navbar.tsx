@@ -1,9 +1,13 @@
 import { useState } from "react";
 
 import useScorllDirection from "../lib/hooks/useScrollDirection";
+import useIsScrolledToTop from "../lib/hooks/useIsScrolledToTop";
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollDirection = useScorllDirection();
+  const isScrolledToTop = useIsScrolledToTop();
+
   function toggleMenu() {
     setIsMenuOpen((prev) => !prev);
   }
