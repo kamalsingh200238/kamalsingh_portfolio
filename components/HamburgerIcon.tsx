@@ -1,16 +1,22 @@
+import { motion } from "framer-motion";
+import { hamburgerVariant } from "@/lib/animations/navbar";
+
 interface Props {
   isMenuOpen: boolean;
 }
 
-export default function HamburgerIcon({isMenuOpen} : Props) {
+export default function HamburgerIcon({ isMenuOpen }: Props) {
   return (
-    <svg
+    <motion.svg
       className={`${
         isMenuOpen ? "rotate-180" : ""
       } z-50 h-full w-full stroke-secondary-500 transition-all duration-200`}
       viewBox="0 0 148 139"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      initial="hidden"
+      animate="visible"
+      variants={hamburgerVariant}
     >
       <rect
         className={`${
@@ -42,6 +48,6 @@ export default function HamburgerIcon({isMenuOpen} : Props) {
         height="10"
         rx="5"
       />
-    </svg>
+    </motion.svg>
   );
 }
