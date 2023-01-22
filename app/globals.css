@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --primary-color-500: #081426;
   --secondary-color-500: #60ffd9;
@@ -9,6 +10,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.hero-size {
+  min-height: max(100vh, 37.5rem);
 }
 
 .vertical-text {
@@ -41,6 +46,7 @@ html {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 .hover-button-animation {
   position: relative;
   color: var(--secondary-color-500);
