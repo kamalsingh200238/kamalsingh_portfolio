@@ -1,5 +1,5 @@
 import { Fira_Code, Oswald, Roboto } from "@next/font/google";
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
