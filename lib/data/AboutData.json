@@ -5,13 +5,13 @@
     "alt": "Kamal Image"
   },
   "techstack": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "ReactJs",
-    "Nextjs",
+    "TypeScript",
     "Tailwind Css",
+    "JavaScript",
+    "Nextjs",
+    "ReactJs",
     "Framer Motion",
-    "RestAPI"
+    "HTML",
+    "CSS"
   ]
 }
