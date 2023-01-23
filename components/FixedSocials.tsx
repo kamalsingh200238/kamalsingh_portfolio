@@ -48,11 +48,12 @@ export default function FixedSocials() {
           <div className="absolute bottom-0 right-1/2 z-10 h-20 w-0.5 translate-x-1/2 bg-gray-400 transition-all duration-200 group-hover:bg-secondary-500" />
         </nav>
       </motion.aside>
-      <motion.aside 
+      <motion.aside
         initial="hidden"
         animate="visible"
         variants={socialsVariant}
-        className="group fixed bottom-0 right-5 h-80 w-11 px-3 max-md:hidden lg:right-8">
+        className="group fixed bottom-0 right-5 h-80 w-11 px-3 max-md:hidden lg:right-8"
+      >
         <nav className="relative h-full text-sm">
           <a
             href={"/"}
