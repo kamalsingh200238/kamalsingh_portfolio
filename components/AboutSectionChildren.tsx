@@ -17,6 +17,7 @@ export default function AboutSectionChildren({ aboutData }: Props) {
           </div>
           <div className="group relative aspect-square h-52 rounded-md lg:h-72">
             <Image
+              priority={true}
               fill={true}
               src={aboutData.image.link}
               className="z-10 rounded-md object-cover"
