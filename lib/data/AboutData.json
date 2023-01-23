@@ -1,0 +1,17 @@
+{
+  "description": "Hello! My name is Kamal and I enjoy creating things that are live on the internet. My interest in web development started back in 2020 when I decided to learn HTML, CSS & JavaScript for fun. And then I just fell in love with coding.",
+  "image": {
+    "link": "/kamalImage.jpg",
+    "alt": "Kamal Image"
+  },
+  "techstack": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "ReactJs",
+    "Nextjs",
+    "Tailwind Css",
+    "Framer Motion",
+    "RestAPI"
+  ]
+}
