@@ -11,7 +11,7 @@ export default function AboutSectionChildren({ aboutData }: Props) {
     <div className="">
       <SectionHeading headingNumber={"01"} headingText={"About Me"} />
       <div className="lg:px-5">
-        <div className="grid place-items-center gap-12 md:grid-cols-2">
+        <div className="mb-14 grid place-items-center gap-12 md:mb-16 md:grid-cols-2">
           <div>
             <p className="md:text-lg">
               {aboutData.description}
