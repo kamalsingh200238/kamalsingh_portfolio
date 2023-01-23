@@ -13,9 +13,7 @@ export default function AboutSectionChildren({ aboutData }: Props) {
       <div className="lg:px-5">
         <div className="mb-14 grid place-items-center gap-12 md:mb-16 md:grid-cols-2">
           <div>
-            <p className="md:text-lg">
-              {aboutData.description}
-            </p>
+            <p className="md:text-lg">{aboutData.description}</p>
           </div>
           <div className="group relative aspect-square h-52 rounded-md lg:h-72">
             <Image
