@@ -22,7 +22,7 @@ export default async function AboutSection() {
       className="px-6 py-20 sm:px-12 md:px-28 md:py-24 lg:px-36"
     >
       <div className="mx-auto max-w-4xl">
-          <AboutSectionChildren aboutData={aboutData} />
+        <AboutSectionChildren aboutData={aboutData} />
       </div>
     </section>
   );
