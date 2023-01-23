@@ -32,13 +32,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`${
-        isScrolledToTop
-          ? "h-24"
-          : "h-16 bg-primary-500/50 shadow-lg backdrop-blur-xl"
-      } ${scrollDirection === "up" && !isScrolledToTop ? "top-0" : ""} ${
+      className={`${isScrolledToTop ? "h-24" : "h-16 shadow-lg"} ${
+        scrollDirection === "up" && !isScrolledToTop ? "top-0" : ""
+      } ${
         scrollDirection === "down" && !isScrolledToTop ? "-top-full" : ""
-      } fixed z-30 flex w-screen items-center justify-between px-6 transition-all duration-200 lg:px-12 `}
+      } fixed z-30 flex w-screen items-center justify-between bg-primary-500/50 px-6 backdrop-blur-xl transition-all duration-200 lg:px-12 `}
     >
       {/* main logo */}
       <div className="aspect-square w-10 lg:w-11">
