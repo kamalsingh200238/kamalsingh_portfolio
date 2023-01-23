@@ -9,7 +9,7 @@ import {
 import { HeroData } from "@/types/HeroData";
 
 interface Props {
-  heroData : HeroData
+  heroData: HeroData;
 }
 export default function HeroChildren({ heroData }: Props) {
   return (
