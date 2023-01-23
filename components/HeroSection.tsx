@@ -1,6 +1,8 @@
+import { HeroData } from "@/types/HeroData";
 import fsPromises from "fs/promises";
 import path from "path";
 import HeroChildren from "./HeroChildren";
+
 async function getData() {
   // get the file path
   const filePath = path.join(process.cwd(), "/lib/data/HeroData.json");
@@ -9,7 +11,7 @@ async function getData() {
 
   const objectData = JSON.parse(fileContent.toString());
 
-  return objectData;
+  return objectData as HeroData;
 }
 
 export default async function HeroSection() {

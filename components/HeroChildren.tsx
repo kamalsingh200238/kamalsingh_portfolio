@@ -6,14 +6,12 @@ import {
   heroChildrenVariant,
   heroContainerVariant,
 } from "@/lib/animations/heroAnimations";
+import { HeroData } from "@/types/HeroData";
 
-export default function HeroChildren({
-  heroData,
-}: {
-  heroData: {
-    description: String;
-  };
-}) {
+interface Props {
+  heroData : HeroData
+}
+export default function HeroChildren({ heroData }: Props) {
   return (
     <motion.div
       initial="hidden"
@@ -31,7 +29,7 @@ export default function HeroChildren({
         variants={heroChildrenVariant}
         className="mb-5 font-oswald text-4xl font-bold text-tertiary-500 md:text-5xl lg:text-6xl"
       >
-        <h1>Kamal Singh</h1>
+        <h1 className="capitalize">kamal singh</h1>
       </motion.div>
       <motion.div
         variants={heroChildrenVariant}
