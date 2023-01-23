@@ -29,6 +29,20 @@ export default function AboutSectionChildren({ aboutData }: Props) {
             <div className="absolute top-5 left-5 aspect-square w-full rounded-md border-2 border-secondary-500  transition-all duration-200 group-hover:left-3 group-hover:top-3" />
           </div>
         </div>
+        <div>
+          <h3 className="font-oswald text-lg mb-5 md:mb-6 lg:mb-8 font-bold text-tertiary-500 md:text-xl lg:text-2xl">
+            Technologies I{"'"}ve worked with
+          </h3>
+          <ul className="grid list-inside list-disc grid-cols-2 justify-items-start text-center text-secondary-500/70 md:grid-cols-3 md:px-5 lg:grid-cols-4 lg:px-6">
+            {aboutData.techstack.map((singleTech: String, index) => {
+              return (
+                <li key={index} className="marker:text-secondary-500 md:text-lg">
+                  {singleTech}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
