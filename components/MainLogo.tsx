@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   mainLogoPolygonVariant,
   mainLogoTextVariant,
-} from "@/lib/animations/navbar";
+} from "@/lib/animations/navbarAnimations";
 
 export default function MainLogo() {
   return (

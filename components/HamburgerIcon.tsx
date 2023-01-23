@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { hamburgerVariant } from "@/lib/animations/navbar";
+import { hamburgerVariant } from "@/lib/animations/navbarAnimations";
 
 interface Props {
   isMenuOpen: boolean;

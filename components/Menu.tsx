@@ -7,7 +7,7 @@ import {
   linksChildrenVariant,
   linksContainerVariant,
   resumeVariant,
-} from "@/lib/animations/navbar";
+} from "@/lib/animations/navbarAnimations";
 
 interface Props {
   isMenuOpen: boolean;
