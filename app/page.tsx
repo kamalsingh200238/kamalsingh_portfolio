@@ -24,9 +24,9 @@ export default function Home() {
       <div className="min-h-screen bg-primary-500 font-roboto text-gray-400">
         <Navbar />
         <main id="content" className="">
+          <FixedSocials />
           {/* @ts-expect-error Server Component */}
           <HeroSection />
-          <FixedSocials />
         </main>
       </div>
     </div>
