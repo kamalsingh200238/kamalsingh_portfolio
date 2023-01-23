@@ -11,6 +11,7 @@ export default function useIsScrolledToTop() {
       setIsScrolledToTop(window.scrollY === 0);
     }
   }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
