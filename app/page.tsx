@@ -1,5 +1,6 @@
 import { Fira_Code, Oswald, Roboto } from "@next/font/google";
 import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -21,7 +22,10 @@ export default function Home() {
     >
       <div className="min-h-screen bg-primary-500 font-roboto text-gray-400">
         <Navbar />
-        <main id="content" className=""></main>
+        <main id="content" className="">
+          {/* @ts-expect-error Server Component */}
+          <HeroSection />
+        </main>
       </div>
     </div>
   );
