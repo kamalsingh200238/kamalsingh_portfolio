@@ -39,7 +39,7 @@ export default function Menu({ closeMenu, toggleMenu, isMenuOpen }: Props) {
   };
 
   return (
-    <div ref={domNode} className="max-md:aspect-square max-md:w-10">
+    <div ref={domNode}>
       <button
         className="relative z-50 h-10 w-10 md:hidden"
         onClick={toggleMenu}
