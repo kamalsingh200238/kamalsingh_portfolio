@@ -78,9 +78,12 @@ export default function Menu({ closeMenu, toggleMenu, isMenuOpen }: Props) {
             initial="hidden"
             animate="visible"
             variants={resumeVariant}
-            className="hover-button-animation rounded-md px-4 py-2 text-sm max-md:mt-4 max-md:px-12 max-md:py-4"
           >
-            <Link href={"/"} onClick={toggleMenu}>
+            <Link
+              href={"/"}
+              className="hover-button-animation rounded-md px-4 py-2 text-sm max-md:mt-4 max-md:px-12 max-md:py-4"
+              onClick={toggleMenu}
+            >
               Resume
             </Link>
           </motion.div>
