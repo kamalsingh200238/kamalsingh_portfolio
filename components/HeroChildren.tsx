@@ -39,7 +39,7 @@ export default function HeroChildren({ heroData }: Props) {
       </motion.div>
       <motion.div
         variants={heroChildrenVariant}
-        className="mb-12 max-w-lg md:text-xl lg:text-lg"
+        className="mb-12 max-w-lg text-lg lg:text-xl"
       >
         <p>{heroData.description}</p>
       </motion.div>
