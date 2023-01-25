@@ -1,5 +1,3 @@
-import SectionHeading from "./SectionHeading";
-
 const contactData = {
   heading: "04. What's next?",
   subHeading: "Get in touch",
@@ -13,10 +11,18 @@ export default function ContactSection() {
       id="contact"
       className="px-6 py-20 sm:px-12 md:px-28 md:py-24 lg:px-36"
     >
-      <div className="">
-        <p>{contactData.heading}</p>
-        <p>{contactData.subHeading}</p>
-        <p>{contactData.description}</p>
+      <div className="mx-auto max-w-xl text-center">
+        <p className="font-fira text-secondary-500">{contactData.heading}</p>
+        <p className="font-oswald text-4xl font-semibold text-tertiary-500">
+          {contactData.subHeading}
+        </p>
+        <p className="text-lg lg:text-xl">{contactData.description}</p>
+        <a
+          href="mailto:kamalsingh200238@gmail.com"
+          className="hover-button-animation inline-block rounded-md px-6 py-3"
+        >
+          Say hello
+        </a>
       </div>
     </section>
   );
