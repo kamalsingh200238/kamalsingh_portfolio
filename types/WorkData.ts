@@ -9,6 +9,6 @@ export interface WorkData {
     features: string[];
     techUsed: string[];
     repoLink: string;
-    linkLink: string;
+    liveLink: string;
   }[];
 }
