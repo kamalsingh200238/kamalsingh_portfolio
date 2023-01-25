@@ -1,6 +1,6 @@
 interface Props {
-  headingNumber: String;
-  headingText: String;
+  headingNumber: string;
+  headingText: string;
 }
 
 export default function SectionHeading({ headingNumber, headingText }: Props) {
