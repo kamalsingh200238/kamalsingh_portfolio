@@ -23,7 +23,7 @@ export default function WorkSectionChildren({ workData }: Props) {
     >
       <SectionHeading headingNumber={"02"} headingText={"My Projects"} />
       {/* grid for Featured projects */}
-      <div className="grid">
+      <div className="grid gap-16 md:gap-24">
         {/* grid for single Featured project */}
         {workData.featured.map((singleFeaturedProject, index) => {
           return (
