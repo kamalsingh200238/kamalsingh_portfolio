@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FixedSocials from "@/components/FixedSocials";
 import AboutSection from "@/components/AboutSection";
+import WorkSection from "@/components/WorkSection";
+import ContactSection from "@/components/ContactSection";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -30,6 +32,9 @@ export default function Home() {
           <HeroSection />
           {/* @ts-expect-error Server Component */}
           <AboutSection />
+          {/* @ts-expect-error Server Component */}
+          <WorkSection />
+          <ContactSection />
         </main>
       </div>
     </div>
