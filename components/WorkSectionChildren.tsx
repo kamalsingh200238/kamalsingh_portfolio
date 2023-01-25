@@ -3,6 +3,8 @@ import { WorkData } from "@/types/WorkData";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 // import '@splidejs/react-splide/css/sea-green'; // this doesn't work
 import Image from "next/image";
+import { FiGithub } from "react-icons/fi";
+import { BiLinkExternal } from "react-icons/bi";
 import SectionHeading from "./SectionHeading";
 
 interface Props {
@@ -20,7 +22,7 @@ export default function WorkSectionChildren({ workData }: Props) {
           return (
             <div
               key={singleFeaturedProject.name}
-              className="grid items-center gap-5 drop-shadow-lg md:grid-cols-2"
+              className="grid items-center gap-5 lg:gap-10 rounded-md p-6 lg:p-10 shadow-2xl lg:grid-cols-2"
             >
               <Splide
                 aria-label="My Favorite Images"
@@ -61,7 +63,7 @@ export default function WorkSectionChildren({ workData }: Props) {
                     );
                   })}
                 </ul>
-                <ul className="flex flex-wrap gap-5">
+                <ul className="flex flex-wrap gap-5 mb-5">
                   {singleFeaturedProject.techUsed.map((tech) => {
                     return (
                       <li key={tech} className="font-fira text-sm">
@@ -70,6 +72,24 @@ export default function WorkSectionChildren({ workData }: Props) {
                     );
                   })}
                 </ul>
+                <div className="text-xl flex">
+                  <a
+                    target="_blank"
+                    className="inline-block p-3 text-tertiary-500 transition-all duration-200 hover:text-secondary-500"
+                    href={singleFeaturedProject.repoLink}
+                    rel="noreferrer"
+                  >
+                    <FiGithub />
+                  </a>
+                  <a
+                    target="_blank"
+                    className="inline-block p-3 text-tertiary-500 transition-all duration-200 hover:text-secondary-500"
+                    href={singleFeaturedProject.liveLink}
+                    rel="noreferrer"
+                  >
+                    <BiLinkExternal />
+                  </a>
+                </div>
               </div>
             </div>
           );
