@@ -48,7 +48,7 @@ export default function WorkSectionChildren({ workData }: Props) {
                 <p className="mb-2 font-fira text-xs text-secondary-500">
                   Featured Poject
                 </p>
-                <p className="mb-3 font-oswald text-xl font-semibold tracking-wide text-tertiary-500">
+                <p className="mb-3 font-oswald text-xl font-bold text-tertiary-500">
                   {singleFeaturedProject.name}
                 </p>
                 <p className="mb-5">{singleFeaturedProject.description}</p>
