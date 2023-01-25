@@ -40,7 +40,7 @@ function FeaturedProjectGrid({
   index: number;
 }) {
   // to change position of image in the grid
-  const order = index % 2 === 0 ? "" : "order-1";
+  const order = index % 2 === 0 ? "" : "lg:order-1";
   return (
     <div
       key={singleFeaturedProject.name}
