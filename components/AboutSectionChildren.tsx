@@ -15,18 +15,18 @@ export default function AboutSectionChildren({ aboutData }: Props) {
           <div>
             <p className="text-lg lg:text-xl">{aboutData.description}</p>
           </div>
-          <div className="group relative aspect-square h-52 rounded-md lg:h-72">
+          <div className="group relative isolate aspect-square h-52 rounded-md lg:h-72">
             <Image
               priority={true}
               fill={true}
               src={aboutData.image.link}
-              className="z-10 rounded-md object-cover"
+              className="rounded-md object-cover mix-blend-multiply transition-all duration-200 group-hover:mix-blend-normal"
               alt={aboutData.image.alt}
             />
-            {/* see through color overlay on image */}
-            <div className="absolute inset-0 z-20 aspect-square w-full rounded-md bg-secondary-500 opacity-60 transition-all duration-200 group-hover:bg-transparent" />
+            {/* backroung in which image blends */}
+            <div className="absolute inset-0 -z-10 aspect-square w-full rounded-md bg-secondary-500 transition-all duration-200" />
             {/* moving border behind the image */}
-            <div className="absolute top-5 left-5 aspect-square w-full rounded-md border-2 border-secondary-500  transition-all duration-200 group-hover:left-3 group-hover:top-3" />
+            <div className="absolute top-5 left-5 -z-20 aspect-square w-full rounded-md border-2 border-secondary-500  transition-all duration-200 group-hover:left-3 group-hover:top-3" />
           </div>
         </div>
         <div>
