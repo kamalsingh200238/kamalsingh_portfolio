@@ -1,0 +1,46 @@
+{
+  "featured": [
+    {
+      "name": "Country Api App",
+      "images": [
+        {
+          "link": "/Country api/desktop-preview.jpg",
+          "alt": "country api desktop-preview"
+        },
+        {
+          "link": "/Country api/desktop-design-home-dark.jpg",
+          "alt": "country api desktop-design-home-dark"
+        },
+        {
+          "link": "/Country api/mobile-design-detail-dark.jpg",
+          "alt": "country api mobile-design-detail-dark"
+        },
+        {
+          "link": "/Country api/desktop-design-detail-dark.jpg",
+          "alt": "country api desktop-design-detail-dark"
+        },
+        {
+          "link": "/Country api/mobile-design-detail-light.jpg",
+          "alt": "country api desktop-design-detail-light"
+        }
+      ],
+      "description": "This is the Front End Mentor project which I completed. In this project I fetch data from a REST API and then display country data in card format.",
+      "features": [
+        "Search a country from search field.",
+        "Filter countries according to location",
+        "Dark and Light mode",
+        "Fully accessible"
+      ],
+      "techUsed": [
+        "NextJs",
+        "Tailwind Css",
+        "REST Api",
+        "ReactJs",
+        "Headless ui",
+        "Vercel"
+      ],
+      "repoLink": "https://github.com/kamalsingh200238/coutry_api",
+      "linkLink": "https://coutry-api.vercel.app/"
+    }
+  ]
+}
