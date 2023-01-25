@@ -20,7 +20,7 @@ export default function WorkSectionChildren({ workData }: Props) {
           return (
             <div
               key={singleFeaturedProject.name}
-              className="grid md:grid-cols-2 gap-5 items-center drop-shadow-lg"
+              className="grid items-center gap-5 drop-shadow-lg md:grid-cols-2"
             >
               <Splide
                 aria-label="My Favorite Images"
@@ -45,14 +45,20 @@ export default function WorkSectionChildren({ workData }: Props) {
                 })}
               </Splide>
               <div className="text-lg">
-                <p className="font-fira text-secondary-500 text-xs mb-2">Featured Poject</p>
-                <p className="font-oswald font-semibold text-tertiary-500 text-xl mb-3 tracking-wide">
+                <p className="mb-2 font-fira text-xs text-secondary-500">
+                  Featured Poject
+                </p>
+                <p className="mb-3 font-oswald text-xl font-semibold tracking-wide text-tertiary-500">
                   {singleFeaturedProject.name}
                 </p>
                 <p className="mb-5">{singleFeaturedProject.description}</p>
-                <ul className="list-outside list-disc marker:text-secondary-500 text-tertiary-500 pl-4 mb-5">
+                <ul className="mb-5 list-outside list-disc pl-4 text-tertiary-500 marker:text-secondary-500">
                   {singleFeaturedProject.features.map((singleFeature) => {
-                    return <li key={singleFeature} className="">{singleFeature}</li>;
+                    return (
+                      <li key={singleFeature} className="">
+                        {singleFeature}
+                      </li>
+                    );
                   })}
                 </ul>
                 <ul className="flex flex-wrap gap-5">
