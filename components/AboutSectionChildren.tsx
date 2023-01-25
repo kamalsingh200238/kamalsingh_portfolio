@@ -30,7 +30,7 @@ export default function AboutSectionChildren({ aboutData }: Props) {
           </div>
         </div>
         <div>
-          <h3 className="mb-5 font-oswald text-lg font-bold text-tertiary-500 md:mb-6 md:text-xl lg:mb-8 lg:text-2xl">
+          <h3 className="mb-5 font-oswald text-lg font-semibold text-tertiary-500 md:mb-6 md:text-xl lg:mb-8 lg:text-2xl">
             Technologies I{"'"}ve worked with
           </h3>
           <ul className="grid list-inside list-disc grid-cols-2 justify-items-start text-center text-tertiary-500 md:grid-cols-3 md:px-5 lg:grid-cols-4 lg:px-6">
