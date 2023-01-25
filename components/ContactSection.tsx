@@ -9,14 +9,14 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="px-6 py-20 sm:px-12 md:px-28 md:py-24 lg:px-36"
+      className="px-6 py-20 sm:px-12 md:px-28 md:py-24 lg:px-36 mb-12"
     >
       <div className="mx-auto max-w-xl text-center">
-        <p className="font-fira text-secondary-500">{contactData.heading}</p>
-        <p className="font-oswald text-4xl font-semibold text-tertiary-500">
+        <p className="font-fira text-secondary-500 mb-4">{contactData.heading}</p>
+        <p className="font-oswald text-4xl font-semibold text-tertiary-500 mb-5">
           {contactData.subHeading}
         </p>
-        <p className="text-lg lg:text-xl">{contactData.description}</p>
+        <p className="text-lg lg:text-xl mb-12">{contactData.description}</p>
         <a
           href="mailto:kamalsingh200238@gmail.com"
           className="hover-button-animation inline-block rounded-md px-6 py-3"
