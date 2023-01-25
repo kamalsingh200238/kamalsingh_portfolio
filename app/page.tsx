@@ -5,6 +5,7 @@ import FixedSocials from "@/components/FixedSocials";
 import AboutSection from "@/components/AboutSection";
 import WorkSection from "@/components/WorkSection";
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const firaCode = Fira_Code({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function Home() {
           <WorkSection />
           <ContactSection />
         </main>
+        <Footer />
       </div>
     </div>
   );
