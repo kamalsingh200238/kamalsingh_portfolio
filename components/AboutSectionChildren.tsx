@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { AboutData } from "@/types/AboutData";
 import SectionHeading from "./SectionHeading";
+import { motion } from "framer-motion";
+import { scrollVariant } from "@/lib/animations/scrollAnimations";
 
 interface Props {
   aboutData: AboutData;
@@ -8,7 +12,13 @@ interface Props {
 
 export default function AboutSectionChildren({ aboutData }: Props) {
   return (
-    <div className="">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={scrollVariant}
+      viewport={{ once: true, amount: 0.2 }}
+      className=""
+    >
       <SectionHeading headingNumber={"01"} headingText={"About Me"} />
       <div className="lg:px-5">
         <div className="mb-14 grid place-items-center gap-12 md:mb-16 md:grid-cols-2">
@@ -47,6 +57,6 @@ export default function AboutSectionChildren({ aboutData }: Props) {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

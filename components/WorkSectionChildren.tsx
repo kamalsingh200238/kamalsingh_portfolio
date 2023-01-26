@@ -6,6 +6,8 @@ import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 import { BiLinkExternal } from "react-icons/bi";
 import SectionHeading from "./SectionHeading";
+import { motion } from "framer-motion"
+import { scrollVariant } from "@/lib/animations/scrollAnimations";
 
 interface Props {
   workData: WorkData;
@@ -13,7 +15,12 @@ interface Props {
 
 export default function WorkSectionChildren({ workData }: Props) {
   return (
-    <div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={scrollVariant}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <SectionHeading headingNumber={"02"} headingText={"My Projects"} />
       {/* grid for Featured projects */}
       <div className="grid">
@@ -28,7 +35,7 @@ export default function WorkSectionChildren({ workData }: Props) {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -42,8 +49,13 @@ function FeaturedProjectGrid({
   // to change position of image in the grid
   const order = index % 2 === 0 ? "" : "lg:order-1";
   return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={scrollVariant}
+      viewport={{ once: true, amount: 0.2 }}
+    >
     <div
-      key={singleFeaturedProject.name}
       className="grid items-center gap-5 rounded-md p-6 shadow-2xl lg:grid-cols-2 lg:gap-10 lg:p-10"
     >
       <div className={`${order}`}>
@@ -116,5 +128,6 @@ function FeaturedProjectGrid({
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }
