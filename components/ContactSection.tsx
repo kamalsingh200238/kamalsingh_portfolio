@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { scrollVariant } from "@/lib/animations/scrollAnimations";
 
 const contactData = {
-  heading: "04. What's next?",
+  heading: "03. What's next?",
   subHeading: "Get in touch",
   description:
     "If my portfolio has sparked your intrest and you'd like to work with me, do not hesitate to contact me. Currently I'm openly looking for new opportunities and would love to connect with you.",
