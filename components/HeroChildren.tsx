@@ -43,12 +43,12 @@ export default function HeroChildren({ heroData }: Props) {
         <p>{heroData.description}</p>
       </motion.div>
       <motion.div variants={heroChildrenVariant} className="">
-        <Link
-          href={"/"}
+        <a
+          href="mailto:kamalsingh200238@gmail.com"
           className="hover-button-animation inline-block rounded-md px-6 py-3"
         >
           Contact Me
-        </Link>
+        </a>
       </motion.div>
     </motion.div>
   );
