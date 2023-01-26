@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
 import { BiLinkExternal } from "react-icons/bi";
 import SectionHeading from "./SectionHeading";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import { scrollVariant } from "@/lib/animations/scrollAnimations";
 
 interface Props {
@@ -55,79 +55,77 @@ function FeaturedProjectGrid({
       variants={scrollVariant}
       viewport={{ once: true, amount: 0.2 }}
     >
-    <div
-      className="grid items-center gap-5 rounded-md p-6 shadow-2xl lg:grid-cols-2 lg:gap-10 lg:p-10"
-    >
-      <div className={`${order}`}>
-        <Splide
-          aria-label="My Favorite Images"
-          options={{
-            rewind: true,
-            gap: "1rem",
-          }}
-        >
-          {singleFeaturedProject.images.map((image) => {
-            return (
-              <SplideSlide key={image.link}>
-                <div className="relative aspect-square w-full">
-                  <Image
-                    className="object-contain"
-                    src={image.link}
-                    alt={image.alt}
-                    fill={true}
-                  />
-                </div>
-              </SplideSlide>
-            );
-          })}
-        </Splide>
-      </div>
-      <div className="text-lg">
-        <p className="mb-2 font-fira text-xs text-secondary-500">
-          Featured Poject
-        </p>
-        <p className="mb-3 font-oswald text-xl font-semibold lg:text-2xl text-tertiary-500">
-          {singleFeaturedProject.name}
-        </p>
-        <p className="mb-5">{singleFeaturedProject.description}</p>
-        <ul className="mb-5 list-outside list-disc pl-4 text-tertiary-500 marker:text-secondary-500">
-          {singleFeaturedProject.features.map((singleFeature) => {
-            return (
-              <li key={singleFeature} className="">
-                {singleFeature}
-              </li>
-            );
-          })}
-        </ul>
-        <ul className="mb-5 flex flex-wrap gap-5">
-          {singleFeaturedProject.techUsed.map((tech) => {
-            return (
-              <li key={tech} className="font-fira text-sm">
-                {tech}
-              </li>
-            );
-          })}
-        </ul>
-        <div className="flex text-xl">
-          <a
-            target="_blank"
-            className="inline-block p-3 text-tertiary-500 transition-all duration-200 hover:text-secondary-500"
-            href={singleFeaturedProject.repoLink}
-            rel="noreferrer"
+      <div className="grid items-center gap-5 rounded-md p-6 shadow-2xl lg:grid-cols-2 lg:gap-10 lg:p-10">
+        <div className={`${order}`}>
+          <Splide
+            aria-label="My Favorite Images"
+            options={{
+              rewind: true,
+              gap: "1rem",
+            }}
           >
-            <FiGithub />
-          </a>
-          <a
-            target="_blank"
-            className="inline-block p-3 text-tertiary-500 transition-all duration-200 hover:text-secondary-500"
-            href={singleFeaturedProject.liveLink}
-            rel="noreferrer"
-          >
-            <BiLinkExternal />
-          </a>
+            {singleFeaturedProject.images.map((image) => {
+              return (
+                <SplideSlide key={image.link}>
+                  <div className="relative aspect-square w-full">
+                    <Image
+                      className="object-contain"
+                      src={image.link}
+                      alt={image.alt}
+                      fill={true}
+                    />
+                  </div>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+        </div>
+        <div className="text-lg">
+          <p className="mb-2 font-fira text-xs text-secondary-500">
+            Featured Poject
+          </p>
+          <p className="mb-3 font-oswald text-xl font-semibold text-tertiary-500 lg:text-2xl">
+            {singleFeaturedProject.name}
+          </p>
+          <p className="mb-5">{singleFeaturedProject.description}</p>
+          <ul className="mb-5 list-outside list-disc pl-4 text-tertiary-500 marker:text-secondary-500">
+            {singleFeaturedProject.features.map((singleFeature) => {
+              return (
+                <li key={singleFeature} className="">
+                  {singleFeature}
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="mb-5 flex flex-wrap gap-5">
+            {singleFeaturedProject.techUsed.map((tech) => {
+              return (
+                <li key={tech} className="font-fira text-sm">
+                  {tech}
+                </li>
+              );
+            })}
+          </ul>
+          <div className="flex text-xl">
+            <a
+              target="_blank"
+              className="inline-block p-3 text-tertiary-500 transition-all duration-200 hover:text-secondary-500"
+              href={singleFeaturedProject.repoLink}
+              rel="noreferrer"
+            >
+              <FiGithub />
+            </a>
+            <a
+              target="_blank"
+              className="inline-block p-3 text-tertiary-500 transition-all duration-200 hover:text-secondary-500"
+              href={singleFeaturedProject.liveLink}
+              rel="noreferrer"
+            >
+              <BiLinkExternal />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </motion.div>
   );
 }
