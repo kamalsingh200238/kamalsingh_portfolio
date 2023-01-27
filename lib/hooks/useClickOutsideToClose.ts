@@ -4,7 +4,7 @@ export default function useClickOutsideToClose(handler: () => void) {
   const domNode = useRef<HTMLDivElement>(null!);
 
   function handleClick(e: TouchEvent | MouseEvent) {
-    if (!domNode.current.contains(e.target)) {
+    if (!domNode.current?.contains(e.target as Node)) {
       handler();
     }
   }
