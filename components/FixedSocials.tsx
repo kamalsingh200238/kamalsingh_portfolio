@@ -56,7 +56,7 @@ export default function FixedSocials() {
       >
         <nav className="relative h-full text-sm">
           <a
-            href={"/"}
+            href={"mailto:kamalsingh200238@gmail.com"}
             target="_blank"
             className="vertical-text inline-block cursor-pointer text-gray-400 transition-all duration-200 hover:-translate-y-1 hover:text-secondary-500"
             rel="noreferrer"
