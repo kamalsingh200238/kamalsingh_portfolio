@@ -1,4 +1,4 @@
-import { Fira_Code, Oswald, Roboto } from "@next/font/google";
+import { Fira_Code, Oswald, Roboto, Inter } from "@next/font/google";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FixedSocials from "@/components/FixedSocials";
@@ -14,6 +14,8 @@ const firaCode = Fira_Code({
 
 const oswald = Oswald({ subsets: ["latin"], variable: "--oswald-font" });
 
+const inter = Inter({ subsets: ["latin"], variable: "--inter-font" });
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -23,7 +25,7 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <div
-      className={`${firaCode.variable} ${oswald.variable} ${roboto.variable}`}
+      className={`${firaCode.variable} ${oswald.variable} ${roboto.variable} ${inter.variable}`}
     >
       <div className="min-h-screen bg-primary-500 font-roboto text-gray-400">
         <Navbar />
