@@ -52,6 +52,7 @@ module.exports = {
         oswald: ["var(--oswald-font)", ...defaultTheme.fontFamily.sans],
         roboto: ["var(--roboto-font)", ...defaultTheme.fontFamily.sans],
         fira: ["var(--fira-code-font)", ...defaultTheme.fontFamily.sans],
+        inter: ["var(--inter-font)", ...defaultTheme.fontFamily.sans],
       },
     },
   },
