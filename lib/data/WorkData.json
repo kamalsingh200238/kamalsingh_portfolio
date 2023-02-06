@@ -47,23 +47,23 @@
       "name": "Space Travel Website",
       "images": [
         {
-          "link": "/space_website/space-website-home-desktop.png",
+          "link": "/space_website/space-website-home-desktop.webp",
           "alt": "screenshot of space website home page"
         },
         {
-          "link": "/space_website/space-website-technology-desktop.png",
+          "link": "/space_website/space-website-technology-desktop.webp",
           "alt": "screenshot of space website technology page"
         },
         {
-          "link": "/space_website/space-website-destination-desktop.png",
+          "link": "/space_website/space-website-destination-desktop.webp",
           "alt": "screenshot of space website destination page"
         },
         {
-          "link": "/space_website/space-website-technology-mobile.png",
+          "link": "/space_website/space-website-technology-mobile.webp",
           "alt": "screenshot of space website technology page mobile version"
         },
         {
-          "link": "/space_website/space-website-destination-mobile.png",
+          "link": "/space_website/space-website-destination-mobile.webp",
           "alt": "screenshot of space website destination page mobile version"
         }
       ],
