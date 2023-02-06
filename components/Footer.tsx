@@ -39,7 +39,7 @@ export default function Footer() {
         </nav>
         <div className="flex flex-col items-center gap-3 text-xs">
           <a
-            href="" // todo: add the repo link here
+            href="https://github.com/kamalsingh200238/kamalsingh_portfolio"
             className="capitalize hover:text-secondary-500"
             target="_blank"
             rel="noreferrer"
