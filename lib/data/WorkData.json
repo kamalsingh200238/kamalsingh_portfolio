@@ -37,7 +37,8 @@
         "REST Api",
         "ReactJs",
         "Headless ui",
-        "Vercel"
+        "Vercel",
+        "React custom hooks"
       ],
       "repoLink": "https://github.com/kamalsingh200238/coutry_api",
       "liveLink": "https://coutry-api.vercel.app/"
@@ -78,8 +79,8 @@
         "Splide Js",
         "Vercel"
       ],
-      "repoLink": "https://github.com/kamalsingh200238/coutry_api",
-      "liveLink": "https://coutry-api.vercel.app/"
+      "repoLink": "https://github.com/kamalsingh200238/space_website_v2",
+      "liveLink": "https://space-website-v2-phi.vercel.app/"
     }
   ]
 }
