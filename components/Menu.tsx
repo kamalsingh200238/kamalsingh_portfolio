@@ -79,13 +79,15 @@ export default function Menu({ closeMenu, toggleMenu, isMenuOpen }: Props) {
             animate="visible"
             variants={resumeVariant}
           >
-            <Link
-              href={"/"}
+            <a
+              href={"/resume.pdf"}
+              target="_blank"
               className="hover-button-animation rounded-md px-4 py-2 text-sm max-md:mt-4 max-md:px-12 max-md:py-4"
               onClick={toggleMenu}
+              rel="noreferrer"
             >
               Resume
-            </Link>
+            </a>
           </motion.div>
         </nav>
       </aside>
