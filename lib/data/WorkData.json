@@ -68,17 +68,8 @@
         }
       ],
       "description": "This is the Front End Mentor project which I completed. It display info about different planets you can travel to, technology that will be used in trip, and crew member that will be responsible for you on your travel.",
-      "features": [
-        "Fully responsive website",
-        "Accessible carousel"
-      ],
-      "techUsed": [
-        "NextJs",
-        "Tailwind Css",
-        "ReactJs",
-        "Splide Js",
-        "Vercel"
-      ],
+      "features": ["Fully responsive website", "Accessible carousel"],
+      "techUsed": ["NextJs", "Tailwind Css", "ReactJs", "Splide Js", "Vercel"],
       "repoLink": "https://github.com/kamalsingh200238/space_website_v2",
       "liveLink": "https://space-website-v2-phi.vercel.app/"
     }
