@@ -41,6 +41,45 @@
       ],
       "repoLink": "https://github.com/kamalsingh200238/coutry_api",
       "liveLink": "https://coutry-api.vercel.app/"
+    },
+    {
+      "name": "Space Travel Website",
+      "images": [
+        {
+          "link": "/space_website/space-website-home-desktop.png",
+          "alt": "screenshot of space website home page"
+        },
+        {
+          "link": "/space_website/space-website-technology-desktop.png",
+          "alt": "screenshot of space website technology page"
+        },
+        {
+          "link": "/space_website/space-website-destination-desktop.png",
+          "alt": "screenshot of space website destination page"
+        },
+        {
+          "link": "/space_website/space-website-technology-mobile.png",
+          "alt": "screenshot of space website technology page mobile version"
+        },
+        {
+          "link": "/space_website/space-website-destination-mobile.png",
+          "alt": "screenshot of space website destination page mobile version"
+        }
+      ],
+      "description": "This is the Front End Mentor project which I completed. It display info about different planets you can travel to, technology that will be used in trip, and crew member that will be responsible for you on your travel.",
+      "features": [
+        "Fully responsive website",
+        "Accessible carousel"
+      ],
+      "techUsed": [
+        "NextJs",
+        "Tailwind Css",
+        "ReactJs",
+        "Splide Js",
+        "Vercel"
+      ],
+      "repoLink": "https://github.com/kamalsingh200238/coutry_api",
+      "liveLink": "https://coutry-api.vercel.app/"
     }
   ]
 }
