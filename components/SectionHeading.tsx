@@ -10,7 +10,7 @@ export default function SectionHeading({ headingNumber, headingText }: Props) {
         <span className="mr-2 font-fira text-secondary-500 sm:text-lg lg:text-xl">
           {headingNumber}.
         </span>
-        <h2 className="inline-block font-oswald text-2xl font-semibold capitalize text-tertiary-500 lg:text-3xl">
+        <h2 className="inline-block font-inter text-2xl font-semibold capitalize text-tertiary-500 lg:text-3xl">
           {headingText}
         </h2>
       </div>

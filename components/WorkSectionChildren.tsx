@@ -84,7 +84,7 @@ function FeaturedProjectGrid({
           <p className="mb-2 font-fira text-xs text-secondary-500">
             Featured Poject
           </p>
-          <p className="mb-3 font-oswald text-xl font-semibold text-tertiary-500 lg:text-2xl">
+          <p className="mb-3 font-inter text-xl font-semibold text-tertiary-500 lg:text-2xl">
             {singleFeaturedProject.name}
           </p>
           <p className="mb-5">{singleFeaturedProject.description}</p>

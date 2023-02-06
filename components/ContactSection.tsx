@@ -26,7 +26,7 @@ export default function ContactSection() {
         <p className="mb-4 font-fira text-secondary-500">
           {contactData.heading}
         </p>
-        <p className="mb-5 font-oswald text-4xl font-semibold text-tertiary-500">
+        <p className="mb-5 font-inter text-4xl font-semibold text-tertiary-500">
           {contactData.subHeading}
         </p>
         <p className="mb-12 text-lg lg:text-xl">{contactData.description}</p>
