@@ -26,13 +26,13 @@ export default function HeroChildren({ heroData }: Props) {
       </motion.div>
       <motion.div
         variants={heroChildrenVariant}
-        className="mb-5 font-oswald text-4xl font-bold text-tertiary-500 md:text-5xl lg:text-6xl"
+        className="mb-5 font-inter text-4xl font-bold text-tertiary-500 md:text-5xl lg:text-6xl"
       >
         <h1 className="capitalize">kamal singh</h1>
       </motion.div>
       <motion.div
         variants={heroChildrenVariant}
-        className="mb-5 font-oswald text-4xl font-bold text-gray-400 md:text-5xl lg:text-6xl"
+        className="mb-5 font-inter text-4xl font-bold text-gray-400 md:text-5xl lg:text-6xl"
       >
         <h2>I build things for the web</h2>
       </motion.div>
