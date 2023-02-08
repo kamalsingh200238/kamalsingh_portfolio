@@ -1,7 +1,7 @@
 {
   "description": "Hello! My name is Kamal and I enjoy creating things that are live on the internet. My interest in web development started back in 2021 when I decided to learn HTML, CSS & JavaScript for a yoga app that I wanted to build for myself. Although I'm still learning so I can create that app soon. But during this journey, I've learned a lot about web technologies.",
   "image": {
-    "link": "/kamalImage.jpg",
+    "link": "/kamalImage.png",
     "alt": "Kamal Image"
   },
   "techstack": [
